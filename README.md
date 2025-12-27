@@ -35,6 +35,17 @@ Some observed patterns (e.g., high repeat-customer behavior) reflect dataset des
 
 > The focus of this project is **analytical structure, clarity, and business logic**, not domain realism.
 
+## Data Model & Core Tables
+- **Customer**: stores customer details and geographic information  
+- **Invoice**: represents sales transactions at the invoice level  
+- **InvoiceLine**: contains line-level purchase details  
+- **Track**: individual products sold  
+- **Album & Artist**: product hierarchy  
+- **Genre**: music category classification  
+
+### Key Relationships
+- Customer → Invoice → InvoiceLine → Track → Album → Artist  
+- Track → Genre
 ---
 
 ## KPIs & SQL Implementation
