@@ -1,12 +1,13 @@
 ## Chinook Database – Core Tables
 
-- Customer: stores customer information and location
-- Invoice: represents sales transactions at the invoice level
-- InvoiceLine: contains line-level purchase details
-- Track: individual products sold
-- Album & Artist: product hierarchy
-- Genre: category classification
+- **Customer**: Stores customer details and geographic information
+- **Invoice**: Represents sales transactions at the invoice level
+- **InvoiceLine**: Contains line-level purchase details
+- **Track**: Individual products sold
+- **Album & Artist**: Product hierarchy
+- **Genre**: Music category classification
 
 ## Key Relationships
-Customer → Invoice → InvoiceLine → Track → Album → Artist
+
+Customer → Invoice → InvoiceLine → Track → Album → Artist  
 Track → Genre
