@@ -73,7 +73,8 @@ Each KPI is implemented as a **standalone, well-documented SQL script**:
 
 ## Dashboard Preview (Power BI)
 
-The dashboard below summarizes key sales KPIs, monthly revenue trends, and geographic performance.
+The dashboard below presents an executive-style overview of sales KPIs,
+monthly revenue trends, and geographic performance derived from SQL analysis.
 
 ![Chinook Sales Dashboard](assets/chinook_dashboard.png)
 
