@@ -81,16 +81,16 @@ monthly revenue trends, and geographic performance derived from SQL analysis.
 ---
 
 ## Key Insights
-- Monthly aggregation makes revenue patterns more interpretable.
-- The **top 10 customers contribute ~19%** of total revenue, indicating **moderate revenue concentration** and low dependency on a small customer segment.
-- Country-level analysis highlights geographic revenue distribution.
-- Purchase-frequency segmentation demonstrates **retention-style analytical logic**.
+- Monthly aggregation provides a clear view of revenue movement over time for trend monitoring.
+- The **top 10 customers contribute ~19%** of total revenue, suggesting **moderate concentration** and low dependency on a small customer segment.
+- Revenue is geographically concentrated, with a small number of countries driving most sales—useful for prioritizing market focus and reporting.
 
 ---
 
 ## How to Run
 1. Load the Chinook PostgreSQL SQL script into a database (e.g., `chinook`) using pgAdmin.
-2. Open any file under `/sql` and execute the queries independently.
+2. Execute any file under `/sql` to reproduce the KPIs.
+3. Use the SQL outputs as inputs for visualization in Power BI.
 
 ---
 
