@@ -2,7 +2,7 @@
 -- KPI 1: Overall Sales Performance
 -- Description:
 --   Calculates total revenue, total invoices,
---   and number of unique customers.
+--   and the number of unique customers.
 -- =====================================================
 
 SELECT
