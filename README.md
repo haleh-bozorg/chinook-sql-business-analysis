@@ -69,28 +69,30 @@ Some observed patterns (e.g., customer purchasing behavior) reflect dataset desi
 
 ---
 
-## KPIs & SQL Implementation
 
-Each KPI is implemented as a **standalone, well-documented SQL script**, demonstrating clear analytical logic and modular query design.
+## KPIs & SQL Implementation
+“Each KPI is derived directly from transactional data using SQL joins between Customer, Invoice, and InvoiceLine tables.”
+
+Each KPI is implemented as a standalone SQL script:
 
 - **KPI 1 – Overall Sales Performance**  
-  `sql/01_overall_kpis.sql`
+  [`sql/01_overall_kpis.sql`](sql/01_overall_kpis.sql)
 
 - **KPI 2 – Monthly Revenue Trend**  
-  `sql/02_monthly_revenue_trend.sql`
+  [`sql/02_monthly_revenue_trend.sql`](sql/02_monthly_revenue_trend.sql)
 
 - **KPI 3 – Top Customers by Revenue**  
-  `sql/03_top_customers.sql`
+  [`sql/03_top_customers.sql`](sql/03_top_customers.sql)
 
 - **KPI 4 – Revenue Concentration (Top 10 Share %)**  
-  `sql/04_revenue_concentration_top10.sql`
+  [`sql/04_revenue_concentration_top10.sql`](sql/04_revenue_concentration_top10.sql)
 
 - **KPI 5 – Revenue by Country**  
-  `sql/05_revenue_by_country.sql`
+  [`sql/05_revenue_by_country.sql`](sql/05_revenue_by_country.sql)
 
 - **KPI 6 – Customer Purchase Frequency Segmentation**  
-  `sql/06_customer_frequency.sql`
-
+  [`sql/06_customer_frequency.sql`](sql/06_customer_frequency.sql)
+  
 ---
 
 ## Dashboard Overview (Power BI)
