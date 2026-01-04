@@ -1,55 +1,77 @@
 # Chinook Sales Analytics  
 **SQL Portfolio Project (PostgreSQL + Power BI)**
 
-## Overview
-This project analyzes **sales performance and customer behavior** using the **Chinook** sample database in **PostgreSQL**.
+![Chinook Sales Dashboard](assets/chinook_dashboard.png)
 
-The objective is to demonstrate **business-focused SQL analytics skills**, including:
-- KPI definition aligned with business questions  
-- Aggregations, joins, and filtering  
-- CTE-based analysis and window-style logic  
-- Translating transactional data into **actionable insights**
+## Overview
+
+This project analyzes **sales performance and customer behavior** using the **Chinook** sample database in **PostgreSQL**. The objective is to demonstrate business-focused **SQL analytics skills on a relational schema**, including multi-table joins, CTE-based aggregations, and customer-level revenue analysis commonly used in sales and finance reporting.
+
+The analysis focuses on translating transactional data into **clear KPIs and actionable insights**, with results presented in an executive-style **Power BI dashboard**.
 
 ---
 
 ## Business Questions Addressed
+
 - How has **monthly revenue** changed over time?
 - Which customers contribute the most to total revenue?
 - What percentage of revenue comes from **top customers**?
 - Which countries generate the highest revenue?
 - What is the **average invoice value**?
-- How frequently do customers purchase (repeat vs low-frequency)?
+- How frequently do customers purchase (repeat vs low-frequency behavior)?
+
+---
+
+## Primary Business KPIs
+
+This analysis focuses on a core set of sales KPIs commonly used in business and finance reporting:
+
+- **Total Revenue**
+- **Monthly Revenue Trend**
+- **Average Invoice Value**
+- **Top Customer Revenue Share**
+- **Revenue by Country**
+
+Additional queries support deeper customer segmentation and exploratory analysis.
 
 ---
 
 ## Tools & Technologies
+
 - **PostgreSQL** (pgAdmin)
-- **SQL** (CTEs, aggregations, grouping, filtering)
-- **Power BI** (KPI cards, trends, country-level visuals)
+- **SQL** (CTEs, joins, aggregations, filtering)
+- **Power BI** (KPI cards, trends, geographic visuals)
+- **GitHub**
 
 ---
 
 ## Dataset Notes
+
 The Chinook database is a **sample dataset**.  
-Some observed patterns (e.g., high repeat-customer behavior) reflect dataset design rather than real-world commercial dynamics.
+Some observed patterns (e.g., customer purchasing behavior) reflect dataset design rather than real-world commercial dynamics.
 
 > The focus of this project is **analytical structure, clarity, and business logic**, not domain realism.
 
+---
+
 ## Data Model & Core Tables
-- **Customer**: stores customer details and geographic information  
-- **Invoice**: represents sales transactions at the invoice level  
-- **InvoiceLine**: contains line-level purchase details  
+
+- **Customer**: customer details and geographic information  
+- **Invoice**: sales transactions at the invoice level  
+- **InvoiceLine**: line-level purchase details  
 - **Track**: individual products sold  
 - **Album & Artist**: product hierarchy  
-- **Genre**: music category classification  
+- **Genre**: product category classification  
 
 ### Key Relationships
 - Customer → Invoice → InvoiceLine → Track → Album → Artist  
 - Track → Genre
+
 ---
 
 ## KPIs & SQL Implementation
-Each KPI is implemented as a **standalone, well-documented SQL script**:
+
+Each KPI is implemented as a **standalone, well-documented SQL script**, demonstrating clear analytical logic and modular query design.
 
 - **KPI 1 – Overall Sales Performance**  
   `sql/01_overall_kpis.sql`
@@ -71,30 +93,36 @@ Each KPI is implemented as a **standalone, well-documented SQL script**:
 
 ---
 
-## Dashboard Preview (Power BI)
+## Dashboard Overview (Power BI)
 
-The dashboard below presents an executive-style overview of sales KPIs,
-monthly revenue trends, and geographic performance derived from SQL analysis.
+The dashboard provides an executive-level snapshot of sales performance, combining SQL-derived KPIs with trend and geographic analysis.
 
-![Chinook Sales Dashboard](assets/chinook_dashboard.png)
+It includes:
+- KPI cards (Revenue, Invoices, Customers, Average Invoice Value)
+- Monthly revenue trend
+- Revenue by country
+- Customer revenue concentration insight
 
 ---
 
 ## Key Insights
-- Monthly aggregation provides a clear view of revenue movement over time for trend monitoring.
-- The **top 10 customers contribute ~19%** of total revenue, suggesting **moderate concentration** and low dependency on a small customer segment.
-- Revenue is geographically concentrated, with a small number of countries driving most sales—useful for prioritizing market focus and reporting.
+
+- Monthly aggregation provides a clear view of revenue movement over time, supporting trend monitoring.
+- The **top 10 customers contribute approximately 19%** of total revenue, indicating **moderate revenue concentration** and low dependency on a small customer segment.
+- Revenue is geographically concentrated, with a limited number of countries driving most sales—useful for prioritizing reporting and market focus.
 
 ---
 
 ## How to Run
+
 1. Load the Chinook PostgreSQL SQL script into a database (e.g., `chinook`) using pgAdmin.
-2. Execute any file under `/sql` to reproduce the KPIs.
-3. Use the SQL outputs as inputs for visualization in Power BI.
+2. Execute any SQL file under the `/sql` directory to reproduce individual KPIs.
+3. Use the query outputs as inputs for visualization in Power BI.
 
 ---
 
 ## Possible Extensions
-- Customer Lifetime Value (CLV)
-- Cohort-based retention analysis
-- Genre-level profitability analysis
+
+- Customer Lifetime Value (CLV) estimation using historical invoice data
+- Revenue-based customer segmentation (low / medium / high value customers)
+- Genre-level revenue contribution analysis to identify top-performing categories
