@@ -111,7 +111,18 @@ It includes:
 - The **top 10 customers contribute approximately 19%** of total revenue, indicating **moderate revenue concentration** and low dependency on a small customer segment.
 - Revenue is geographically concentrated, with a limited number of countries driving most sales—useful for prioritizing reporting and market focus.
 
+Analytical choices such as revenue concentration metrics and customer-level aggregation are used to capture distribution behavior and reduce sensitivity to long-tail effects without unnecessary predictive modeling.
+
 ---
+
+## Production Readiness & Practical Use
+
+While this project was not deployed in a live production environment, the analysis and SQL queries are designed to be production-ready:
+
+- SQL logic is modular, reusable, and separated by KPI
+- Queries operate directly on transactional tables using standard relational joins
+- KPI definitions align with common sales and finance reporting practices
+- The dashboard structure supports refresh with new data without changes to logic
 
 ## How to Run
 
@@ -126,3 +137,4 @@ It includes:
 - Customer Lifetime Value (CLV) estimation using historical invoice data
 - Revenue-based customer segmentation (low / medium / high value customers)
 - Genre-level revenue contribution analysis to identify top-performing categories
+
